@@ -77,7 +77,14 @@ describe('SweetShop', () => {
     expect(names).toContain('Barfi');
   });
 
-
-
+  test('sort sweets by price ascending', () => {
+    shop.addSweet('1001', 'Kaju Katli', 'Nut-Based', 50, 20);
+    shop.addSweet('1002', 'Rasgulla', 'Syrup-Based', 30, 15);
+    shop.addSweet('1003', 'Barfi', 'Nut-Based', 40, 10);
+    const sweets = shop.viewSweets().sort((a, b) => a.price - b.price);
+    expect(sweets[0].name).toBe('Rasgulla');
+    expect(sweets[1].name).toBe('Barfi');
+    expect(sweets[2].name).toBe('Kaju Katli');
+  }); 
 
 });
