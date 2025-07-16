@@ -27,4 +27,10 @@ describe('SweetShop', () => {
         expect(shop.sweets['1001'].name).toBe('Kaju Katli');
     });
 
+    // Test for deleting a sweet
+    test('deletes a sweet', () => {
+        shop.addSweet('1001', 'Kaju Katli', 'Nut-Based', 50, 20);
+        shop.deleteSweet('1001');
+        expect(shop.sweets['1001']).toBeUndefined();
+    });
 });
