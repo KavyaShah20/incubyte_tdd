@@ -11,6 +11,11 @@ class sweetshop {
             throw new Error('Id, name, and category are required');
         }
 
+        if (this.sweets.hasOwnProperty(id)) {
+            throw new Error('Sweet already exists');
+        }
+
+
         this.sweets[id] = new Sweet(id, name, category, price, quantity);//new sweet added 
     }
 
