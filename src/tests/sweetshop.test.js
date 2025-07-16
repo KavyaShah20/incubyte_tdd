@@ -1,4 +1,4 @@
-const SweetShop = require('../controllers/sweetShop.controller.js');
+const SweetShop = require('../services/sweetshop.service.js');
 
 describe('SweetShop', () => {
     let shop;
