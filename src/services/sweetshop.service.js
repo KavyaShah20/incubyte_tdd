@@ -23,7 +23,7 @@ class sweetshop {
         if (quantity < 0) {
             throw new Error('Quantity cannot be negative');
         }
-        
+
         this.sweets[id] = new Sweet(id, name, category, price, quantity);//new sweet added 
     }
 
@@ -32,7 +32,7 @@ class sweetshop {
             throw new Error(`Sweet with ID ${id} not found`);
         }
 
-        delete this.sweets[id];//delete sweet by id
+        delete this.sweets[id];
     }
 
     purchaseSweet(id, quantity) {
