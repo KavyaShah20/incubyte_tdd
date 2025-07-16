@@ -48,6 +48,14 @@ describe('SweetShop', () => {
         shop.deleteSweet('1001');
         expect(shop.sweets['1001']).toBeUndefined();
     });
+    test('throws error when deleting non-existent sweet', () => {
+        expect(() => shop.deleteSweet('9999')).toThrow('Sweet with ID 9999 not found');
+    });
+    test('throws error when deleting with null/undefined ID', () => {
+        expect(() => shop.deleteSweet(null)).toThrow();
+        expect(() => shop.deleteSweet(undefined)).toThrow();
+    });
+
 
     //Test if after purchasing a sweet, the quantity is reduced
     test('purchase sweet reduces quantity', () => {
