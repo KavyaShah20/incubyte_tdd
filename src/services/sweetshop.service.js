@@ -16,6 +16,14 @@ class sweetshop {
         }
 
 
+        if (typeof price !== 'number' || isNaN(price)) {
+            throw new Error('Price must be a valid number');
+        }
+
+        if (quantity < 0) {
+            throw new Error('Quantity cannot be negative');
+        }
+        
         this.sweets[id] = new Sweet(id, name, category, price, quantity);//new sweet added 
     }
 
