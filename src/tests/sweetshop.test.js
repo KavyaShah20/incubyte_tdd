@@ -33,6 +33,14 @@ describe('SweetShop', () => {
         expect(() => shop.addSweet('1001', 'Other Sweet', 'Candy', 20, 10)).toThrow();
     });
 
+    test('throws error when adding sweet with negative quantity', () => {
+        expect(() => shop.addSweet('1001', 'Bad Sweet', 'Candy', 10, -5)).toThrow();
+    });
+
+    test('throws error when adding sweet with non-numeric price', () => {
+        expect(() => shop.addSweet('1001', 'Odd Sweet', 'Candy', 'ten', 5)).toThrow();
+    });
+
 
     // Test for deleting a sweet
     test('deletes a sweet', () => {
