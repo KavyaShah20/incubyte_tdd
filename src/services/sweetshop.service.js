@@ -35,5 +35,16 @@ class sweetshop {
 
         item.quantity -= quantity;
     }
+
+    searchSweets({ name, category, minPrice, maxPrice }) {
+        return Object.values(this.sweets).filter((sweet) => {
+            const nameMatch = !name || sweet.name.toLowerCase().includes(name.toLowerCase());
+            const categoryMatch = !category || sweet.category.toLowerCase() === category.toLowerCase();
+            const minPriceMatch = !minPrice || sweet.price >= minPrice;
+            const maxPriceMatch = !maxPrice || sweet.price <= maxPrice;
+
+            return nameMatch && categoryMatch && minPriceMatch && maxPriceMatch;
+        });
+    }
 }
 module.exports = sweetshop;
