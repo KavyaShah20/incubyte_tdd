@@ -38,7 +38,7 @@ incubyte_tdd/
 ├── README.md # Project documentation
 ```
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -132,7 +132,7 @@ Ran all test suites.
 | 14   | Sort sweets by price in ascending order                               |
 
 
-## 👨‍💻 Author
+## Author
 
 **Kavya Shah**
 - GitHub: [@KavyaShah20](https://github.com/KavyaShah20)
